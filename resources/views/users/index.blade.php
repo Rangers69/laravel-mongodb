@@ -41,7 +41,10 @@
                                         <td>{{$user->email}}</td>
                                         <td>{{$user->created_at}}</td>
                                         <td> 
-                                        <div class="row justify-content-center">    
+                                        <div class="row justify-content-center">   
+                                        <a href="{{ url('users/'.$user->id.'/detail') }}"
+                                            class="btn btn-info btn-sm">Detail</a>
+                                            &nbsp; 
                                         <a href="{{ url('users/'.$user->id.'/edit') }}"
                                             class="btn btn-warning btn-sm">Edit</a>
                                             &nbsp;

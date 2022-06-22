@@ -47,7 +47,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        // $users = User::find($id);
+        // return view('users.detail',compact('users','id'));
     }
 
     /**
@@ -90,5 +91,11 @@ class UserController extends Controller
     {
         $user->delete();
         return redirect('users')->with('delete','User has been deleted');
+    }
+
+    public function detail($id)
+    {
+        $users = User::find($id);
+        return view('users.detail',compact('users','id'));
     }
 }

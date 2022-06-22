@@ -20,5 +20,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::resource('/books', App\Http\Controllers\BookController::class);
+
+
+Route::get('/users/{user}/detail', [App\Http\Controllers\UserController::class, 'detail'])->name('user.detail');
+
 Route::resource('/users', App\Http\Controllers\UserController::class);
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
